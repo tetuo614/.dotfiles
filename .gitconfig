@@ -1,4 +1,5 @@
 [alias]
     co = checkout
+    graph = log --graph --decorate --oneline
 [color]
     ui = auto
