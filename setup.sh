@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOT_FILES=(.vimrc .vim .gitconfig)
+DOT_FILES=(.vimrc .vim .gitconfig .zsh .zshrc)
 
 if [ $# -eq 0 ]; then
     echo 'all file'
