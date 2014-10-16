@@ -24,4 +24,8 @@ set shiftwidth=4
 "set mouse=a
 "set ttymouse=xterm2
 
+" pasteを有効にする
 set paste
+
+" backspaceを有効にする
+set backspace=start,eol,indent
