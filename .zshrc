@@ -227,3 +227,6 @@ esac
 autoload colors
 colors
 PROMPT="[%F{cyan}%n%f@${host_color} %1~] %B%F{red}❯%F{yellow}❯%F{green}❯%f%b "
+
+# エイリアス
+alias ll='ls -l'
