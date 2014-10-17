@@ -211,3 +211,19 @@ export LS_COLORS='di=01;34:ln=01;35:so=01;32:ex=01;31:bd=46;34:cd=43;34:su=41;30
 zstyle ':completion:*' list-colors 'di=;34;1' 'ln=;35;1' 'so=;32;1' 'ex=31;1' 'bd=46;34' 'cd=43;34'
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# ホスト名の末尾から環境を判断してプロンプト色を変える
+host_suffix=${HOST: -4}
+host_color="%B%F%m%f%b"
+case $host_suffix[0,1] in
+  "d" )
+    host_color="%F{green}%m%f";;
+  "s" )
+    host_color="%B%F{blue}%m%f%b";;
+  "p" )
+    host_color="%F{red}%m%f";;
+esac
+# プロンプト
+autoload colors
+colors
+PROMPT="[%F{cyan}%n%f@${host_color} %1~] %B%F{red}❯%F{yellow}❯%F{green}❯%f%b "
