@@ -230,3 +230,19 @@ PROMPT="[%F{cyan}%n%f@${host_color} %1~] %B%F{red}❯%F{yellow}❯%F{green}❯%f
 
 # エイリアス
 alias ll='ls -l'
+
+# 履歴
+HISTFILE=~/.zsh_history
+HISTSIZE=1000000
+SAVEHIST=1000000
+
+# cdr 直近の移動したディレクトリに移動
+autoload -Uz add-zsh-hook
+autoload -Uz chpwd_recent_dirs cdr
+add-zsh-hook chpwd chpwd_recent_dirs
+
+# zmv 一括リネーム
+autoload -Uz zmv
+
+# 256色対応
+alias tmux="TERM=xterm-256color tmux"
