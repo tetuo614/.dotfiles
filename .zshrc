@@ -245,4 +245,4 @@ add-zsh-hook chpwd chpwd_recent_dirs
 autoload -Uz zmv
 
 # 256色対応
-alias tmux="TERM=xterm-256color tmux"
+#alias tmux="TERM=xterm-256color tmux"
