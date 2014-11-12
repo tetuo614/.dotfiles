@@ -3,10 +3,10 @@ syntax on
 
 "カラースキーマ設定
 colorscheme molokai
-let g:molokai_original = 1
-let g:rehash256 = 1
-set background=dark
-set t_Co=256
+"let g:molokai_original = 1
+"let g:rehash256 = 1
+"set background=dark
+"set t_Co=256
 
 "カレント行をハイライト
 set cursorline
@@ -29,3 +29,6 @@ set paste
 
 " backspaceを有効にする
 set backspace=start,eol,indent
+
+" paste mode切り替え
+nnoremap <F10> :set paste!<CR>:set paste?<CR>
