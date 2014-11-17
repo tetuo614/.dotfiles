@@ -244,5 +244,6 @@ add-zsh-hook chpwd chpwd_recent_dirs
 # zmv 一括リネーム
 autoload -Uz zmv
 
-# 256色対応
+# 256色対応(macのscreenが最新じゃないため)
 #alias tmux="TERM=xterm-256color tmux"
+
