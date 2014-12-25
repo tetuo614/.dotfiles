@@ -247,3 +247,5 @@ autoload -Uz zmv
 # 256色対応(macのscreenが最新じゃないため)
 #alias tmux="TERM=xterm-256color tmux"
 
+# iTermのタブにユーザーとカレントディレクトリを表示する
+function chpwd() { echo -ne "\033]0;${USER}@${HOST}:$(pwd)\007" }
