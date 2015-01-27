@@ -32,3 +32,9 @@ set backspace=start,eol,indent
 
 " paste mode切り替え
 nnoremap <F10> :set paste!<CR>:set paste?<CR>
+
+" for .hql files
+au BufNewFile,BufRead *.hql set filetype=hive expandtab
+
+" for .q files
+au BufNewFile,BufRead *.q set filetype=hive expandtab
