@@ -230,6 +230,7 @@ PROMPT="[%F{cyan}%n%f@${host_color} %1~] %B%F{red}❯%F{yellow}❯%F{green}❯%f
 
 # エイリアス
 alias ll='ls -l'
+alias lll='ls -la'
 
 # 履歴
 HISTFILE=~/.zsh_history

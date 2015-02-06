@@ -33,6 +33,9 @@ set backspace=start,eol,indent
 " paste mode切り替え
 nnoremap <F10> :set paste!<CR>:set paste?<CR>
 
+" vimrc reload
+nnoremap <F5> :<C-u>source $MYVIMRC<CR>
+
 " for .hql files
 au BufNewFile,BufRead *.hql set filetype=hive expandtab
 
@@ -52,13 +55,16 @@ call neobundle#end()
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-NeoBundle 'Shougo/vimproc'
+"NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/unite.vim'
 
 " NeoSnippets
 NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
+
+" NERDtree
+NeoBundle 'scrooloose/nerdtree'
 
 " Added For Ruby Programming
 NeoBundle 'AndrewRadev/switch.vim'
@@ -101,4 +107,20 @@ inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><C-y> neocomplete#close_popup()
 inoremap <expr><C-e> neocomplete#cancel_popup()
+
+" 補完をキャンセルしてカーソル移動
+inoremap <expr><left> neocomplete#cancel_popup() . "\<left>"
+inoremap <expr><right> neocomplete#cancel_popup() . "\<right>"
 "}}}
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" NERDtree
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" NERDtree "{{{
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
+let g:NERDTreeShowHidden=1
+"}}}
+
+
+
