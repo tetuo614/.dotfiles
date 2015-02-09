@@ -27,7 +27,6 @@ How to use
 
 
 ### Neobundle設定 ###
-リポジトリをclone ---#
     #--- サブモジュール初期化  ---#
     $ git submodule init
     $ git submodule update
