@@ -109,8 +109,12 @@ inoremap <expr><C-y> neocomplete#close_popup()
 inoremap <expr><C-e> neocomplete#cancel_popup()
 
 " 補完をキャンセルしてカーソル移動
-inoremap <expr><left> neocomplete#cancel_popup() . "\<left>"
-inoremap <expr><right> neocomplete#cancel_popup() . "\<right>"
+"inoremap <expr><left> neocomplete#cancel_popup() . "\<left>"
+"inoremap <expr><right> neocomplete#cancel_popup() . "\<right>"
+" 自動で補完候補を出さない
+let g:neocomplete#disable_auto_complete = 1
+"<Ctrl+Space> ：手動補完候補表示
+inoremap <expr><nul> pumvisible() ? "\<down>" : neocomplete#start_manual_complete()
 "}}}
 
 
