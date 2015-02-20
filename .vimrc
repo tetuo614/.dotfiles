@@ -20,21 +20,16 @@ set autoindent
 set expandtab
 set shiftwidth=4
 
-"マウス操作を有効にする
-"set mouse=a
-"set ttymouse=xterm2
-
-" pasteを有効にする
-"set paste
-
 " backspaceを有効にする
 set backspace=start,eol,indent
 
-" paste mode切り替え
-nnoremap <F10> :set paste!<CR>:set paste?<CR>
-
+" mode切り替えショートカットキー
 " vimrc reload
-nnoremap <F5> :<C-u>source $MYVIMRC<CR>
+nnoremap <F5>  :<C-u>source $MYVIMRC<CR>
+" vimrc reload
+nnoremap <F7>  :set number!<CR>:set number?<CR>
+" paste mode on/off
+nnoremap <F8>  :set paste!<CR>:set paste?<CR>
 
 " for .hql files
 au BufNewFile,BufRead *.hql set filetype=hive expandtab
