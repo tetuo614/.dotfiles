@@ -25,3 +25,9 @@ How to use
         ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
     done
 
+
+### Neobundle設定 ###
+    #--- サブモジュール初期化  ---#
+    $ git submodule init
+    $ git submodule update
+
