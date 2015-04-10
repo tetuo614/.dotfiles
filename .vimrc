@@ -70,6 +70,10 @@ NeoBundle 'tpope/vim-endwise'
 " Added For Tmux Session
 NeoBundle 'tpope/vim-obsession'
 
+" Syntax
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'taichouchou2/html5.vim'
+
 filetype plugin indent on     " Required!
 NeoBundleCheck
 
