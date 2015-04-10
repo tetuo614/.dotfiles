@@ -2,3 +2,7 @@
 .vim/bundle/*
 !.vim/bundle/neobundle.vim
 .gitconfig
+Session.vim
+.tmux/plugins/*
+.tmux/plugins/tpm/
+.tmux/plugins/tmux-resurrect/

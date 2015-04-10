@@ -30,6 +30,8 @@ nnoremap <F5>  :<C-u>source $MYVIMRC<CR>
 nnoremap <F7>  :set number!<CR>:set number?<CR>
 " paste mode on/off
 nnoremap <F8>  :set paste!<CR>:set paste?<CR>
+" Obsessuib on/off
+nnoremap <F10> :Obsession<CR>
 
 " for .hql files
 au BufNewFile,BufRead *.hql set filetype=hive expandtab
@@ -64,6 +66,9 @@ NeoBundle 'scrooloose/nerdtree'
 " Added For Ruby Programming
 NeoBundle 'AndrewRadev/switch.vim'
 NeoBundle 'tpope/vim-endwise'
+
+" Added For Tmux Session
+NeoBundle 'tpope/vim-obsession'
 
 filetype plugin indent on     " Required!
 NeoBundleCheck
