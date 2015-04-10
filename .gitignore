@@ -6,3 +6,4 @@ Session.vim
 .tmux/plugins/*
 .tmux/plugins/tpm/
 .tmux/plugins/tmux-resurrect/
+.tmux/resurrect/
