@@ -14,6 +14,9 @@ set cursorline
 "行番号を表示
 set number
 
+"折り返し表示しない
+set nowrap
+
 "インデントをTabではなくスペース4つで揃える
 set tabstop=4
 set autoindent
@@ -26,7 +29,9 @@ set backspace=start,eol,indent
 " mode切り替えショートカットキー
 " vimrc reload
 nnoremap <F5>  :<C-u>source $MYVIMRC<CR>
-" vimrc reload
+" wrap mode on/off
+nnoremap <F6>  :set wrap!<CR>:set wrap?<CR>
+" number mode on/off
 nnoremap <F7>  :set number!<CR>:set number?<CR>
 " paste mode on/off
 nnoremap <F8>  :set paste!<CR>:set paste?<CR>
