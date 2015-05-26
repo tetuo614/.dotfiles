@@ -1,6 +1,7 @@
 .vim/.netrwhist
 .vim/bundle/*
 !.vim/bundle/neobundle.vim
+!.vim/bundle/neosnippet-snippets/neosnippets/
 .gitconfig
 Session.vim
 .tmux/plugins/*
