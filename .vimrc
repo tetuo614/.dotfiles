@@ -79,6 +79,16 @@ NeoBundle 'tpope/vim-obsession'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'taichouchou2/html5.vim'
 
+" Align
+" SQLUtilities {{{
+NeoBundleLazy 'vim-scripts/SQLUtilities', {
+\    'depends': 'vim-scripts/Align',
+\    'autoload': {
+\        'commands' : 'SQLUFormatter',},}
+let g:sqlutil_align_comma = 1
+nnoremap <Leader>sql :SQLUFormatter<CR>
+"}}}
+
 filetype plugin indent on     " Required!
 NeoBundleCheck
 

@@ -228,6 +228,10 @@ autoload colors
 colors
 PROMPT="[%F{cyan}%n%f@${host_color} %1~] %B%F{red}❯%F{yellow}❯%F{green}❯%f%b "
 
+# プロンプト(mysql用)
+#export MYSQL_PS1="\u@`hostname`[\d]> "
+export MYSQL_PS1="mysql[\d]> "
+
 # エイリアス
 alias ll='ls -l'
 alias lll='ls -la'
