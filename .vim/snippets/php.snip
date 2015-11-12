@@ -19231,6 +19231,6 @@ abbr 出力圧縮に使用されたコーディングの種類を返す
 snippet var_dump_debug
 abbr  変数に関する情報をダンプする(preタグ有り)
   echo '<pre>';
-  var_dump(${1:$expression}, ${2:$...});
-  echo '<pre>';
+  var_dump(${1:$expression});
+  echo '</pre>';
 
