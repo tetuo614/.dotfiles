@@ -35,8 +35,12 @@ nnoremap <F6>  :set wrap!<CR>:set wrap?<CR>
 nnoremap <F7>  :set number!<CR>:set number?<CR>
 " paste mode on/off
 nnoremap <F8>  :set paste!<CR>:set paste?<CR>
+" 相対行番号を有効にする
+nnoremap <F9>  :set relativenumber!<CR>:set relativenumber?<CR>
 " Obsessuib on/off
 nnoremap <F10> :Obsession<CR>
+" tagbar
+nnoremap <F11> :TagbarToggle<CR>
 
 " for .hql files
 au BufNewFile,BufRead *.hql set filetype=hive expandtab
@@ -89,6 +93,15 @@ let g:sqlutil_align_comma = 1
 nnoremap <Leader>sql :SQLUFormatter<CR>
 "}}}
 
+" vim-easymotion
+NeoBundle 'Lokaltog/vim-easymotion'
+
+" scala
+NeoBundle 'derekwyatt/vim-scala'
+
+" tagbar
+NeoBundle 'majutsushi/tagbar'
+
 filetype plugin indent on     " Required!
 NeoBundleCheck
 
@@ -135,8 +148,27 @@ inoremap <expr><C-e> neocomplete#cancel_popup()
 let g:neocomplete#disable_auto_complete = 1
 "<Ctrl+Space> ：手動補完候補表示
 inoremap <expr><nul> pumvisible() ? "\<down>" : neocomplete#start_manual_complete()
+let g:neocomplete#sources#dictionary#dictionaries = {
+  \ 'default' : '',
+  \ 'scala' : $HOME . '/.vim/dict/scala.dict',
+  \ }
 "}}}
-
+" Plugin key-mappings.
+inoremap <expr><C-g>     neocomplete#undo_completion()
+inoremap <expr><C-l>     neocomplete#complete_common_string()
+" Recommended key-mappings.
+" <CR>: close popup and save indent.
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+function! s:my_cr_function()
+  return neocomplete#close_popup() . "\<CR>"
+endfunction
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" <C-h>, <BS>: close popup and delete backword char.
+inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><C-y>  neocomplete#close_popup()
+inoremap <expr><C-e>  neocomplete#cancel_popup()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " NERDtree
@@ -144,7 +176,25 @@ inoremap <expr><nul> pumvisible() ? "\<down>" : neocomplete#start_manual_complet
 " NERDtree "{{{
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 let g:NERDTreeShowHidden=1
+map <C-l> gt
+map <C-h> gT
 "}}}
 
-
-
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-easymotion
+""""""""""""""""""""""""""""""""""""""""""""""""""
+"nmap s <Plug>(easymotion-s2)
+" ホームポジションに近いキーを使う
+"let g:EasyMotion_keys='hjklasdfgyuiopqwertnmzxcvbHJKLASDFGYUIOPQWERTNMZXCVB'
+" 「'」 + 何かにマッピング
+"let g:EasyMotion_leader_key="'s"
+" 1 ストローク選択を優先する
+"let g:EasyMotion_grouping=1
+" カラー設定変更
+"hi EasyMotionTarget ctermbg=none ctermfg=red
+"hi EasyMotionShade  ctermbg=none ctermfg=blue
+let g:EasyMotion_do_mapping = 0 "Disable default mappings
+nmap s <Plug>(easymotion-sn)
+vmap s <Plug>(easymotion-sn)
+nmap S <Plug>(easymotion-overwin-f2)
+let g:EasyMotion_keys='hjklasdfgyuiopqwertnmzxcvbHJKLASDFGYUIOPQWERTNMZXCVB'
