@@ -102,6 +102,12 @@ NeoBundle 'derekwyatt/vim-scala'
 " tagbar
 NeoBundle 'majutsushi/tagbar'
 
+" vim git
+NeoBundle 'tpope/vim-fugitive'
+
+" vim import sort (python)
+NeoBundle 'fisadev/vim-isort'
+
 filetype plugin indent on     " Required!
 NeoBundleCheck
 
