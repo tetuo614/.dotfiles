@@ -1,5 +1,5 @@
 [alias]
     co = checkout
-    graph = log --graph --decorate --oneline
+    graph = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
 [color]
     ui = auto
