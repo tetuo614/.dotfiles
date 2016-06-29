@@ -1,0 +1,9 @@
+# -*- encoding: utf-8 -*-
+try:
+  import readline
+except ImportError:
+  # readline モジュールがないときは無視する
+  pass
+else:
+  import rlcompleter
+  readline.parse_and_bind("tab: complete")

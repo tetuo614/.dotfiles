@@ -254,3 +254,6 @@ autoload -Uz zmv
 
 # iTermのタブにユーザーとカレントディレクトリを表示する
 function chpwd() { echo -ne "\033]0;${USER}@${HOST}:$(pwd)\007" }
+
+# PYTHONSTARTUP設定
+export PYTHONSTARTUP=~/.pythonrc
