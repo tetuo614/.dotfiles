@@ -257,3 +257,9 @@ function chpwd() { echo -ne "\033]0;${USER}@${HOST}:$(pwd)\007" }
 
 # PYTHONSTARTUP設定
 export PYTHONSTARTUP=~/.pythonrc
+
+# Virtualenvwrapper
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+  export WORKON_HOME=$HOME/.virtualenvs
+  source /usr/local/bin/virtualenvwrapper.sh
+fi
