@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOT_FILES=(.vimrc .vim .gitconfig .zsh .zshrc .tmux.conf .tmux)
+DOT_FILES=(.vimrc .vim .gitconfig .zsh .zshrc .tmux.conf .tmux .pythonrc)
 
 if [ $# -eq 0 ]; then
     echo 'all file'
