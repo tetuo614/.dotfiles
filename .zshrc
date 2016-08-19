@@ -12,6 +12,12 @@ fi
 
 # Customize to your needs...
 
+# zsh_option_file
+if [[ -s "${ZDOTDIR:-$HOME}/.zsh_option_file" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zsh_option_file"
+fi
+
+
 # vcs_info 設定
 
 RPROMPT=""
